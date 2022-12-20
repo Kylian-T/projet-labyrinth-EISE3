@@ -166,7 +166,7 @@ t_return_code getMove(t_move *move)
     int ret = getCGSMove(__FUNCTION__, data, msg);
 
 	/* extract move */
-	sscanf( data, "%d %d %d %d %d %d %d %d %d %d %d", &(move->insert), &(move->number), &(move->rotation),
+	sscanf( data, "%d %d %d %d %d %d %d %d %d %d %d", (int*) &(move->insert), &(move->number), &(move->rotation),
 			&(move->x), &(move->y),
 			&(move->tileN), &(move->tileE), &(move->tileS), &(move->tileW), &(move->tileItem),
 			&(move->nextItem));
